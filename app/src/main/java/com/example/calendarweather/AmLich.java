@@ -10,6 +10,7 @@ public class AmLich {
     int chinamsrc, nguHanhsrc;
     int menh, mct;
     int menhchitiet;
+    
 
     public  Calculation calculation = new Calculation();
     /* Tim can, chi nam, thang, ngay va gio nam am lich */
