@@ -1,6 +1,7 @@
 package com.example.calendarweather;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.android.volley.Request;
@@ -34,6 +36,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class CurrentWeatherFragment extends Fragment {
@@ -221,6 +224,7 @@ public class CurrentWeatherFragment extends Fragment {
     private void parsejson(String latlong, final int GMT){
         String url1 = "https://api.darksky.net/forecast/3631f61602a29ee69edc1f4accb0a2b8/" + latlong;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(JSONObject response) {
                 try {
@@ -297,10 +301,6 @@ public class CurrentWeatherFragment extends Fragment {
                     description.setEnabled(false);
                     chart.setDescription(description);
 
-                    //setting animation for y-axis, the bar will pop up from 0 to its value within the time we set
-                    chart.animateY(1000);
-                    //setting animation for x-axis, the bar will pop up separately within the time we set
-                    chart.animateX(1000);
 
                     XAxis xAxis = chart.getXAxis();
                     //change the position of x-axis to the bottom
@@ -322,8 +322,26 @@ public class CurrentWeatherFragment extends Fragment {
 
                     YAxis leftAxis = chart.getAxisLeft();
                     //hiding the left y-axis line, default true if not set
-                    leftAxis.setDrawAxisLine(false);
+                    leftAxis.setDrawAxisLine(true);
                     leftAxis.setDrawGridLines(false);
+
+
+                    Double min = Arrays.stream(tempChour).min().getAsDouble();
+                    Double max = Arrays.stream(tempChour).max().getAsDouble();
+                    int minSmall = (int) Math.round(min);
+                    int maxSmall = (int) Math.round(max);
+                    int maxRound = (int) Math.floor(max / 10);
+                    minSmall = minSmall - minSmall % 10;
+                    maxRound = maxRound * 10 ;
+                    if (maxRound < maxSmall) {
+                        maxSmall = maxSmall + 10;
+                    }
+
+                    float minTemp = (float) minSmall;
+                    float maxTemp = (float) maxSmall;
+
+                    leftAxis.setAxisMaximum(maxTemp);
+                    leftAxis.setAxisMinimum(minTemp);
 
                     YAxis rightAxis = chart.getAxisRight();
                     rightAxis.setEnabled(false);
@@ -357,6 +375,7 @@ public class CurrentWeatherFragment extends Fragment {
                     }
 
                     BarDataSet barDataSet = new BarDataSet(entries, title);
+
 
                     //Changing the color of the bar
                     barDataSet.setColor(Color.parseColor("#304567"));
