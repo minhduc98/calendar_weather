@@ -3,11 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/CODING/ANDROID/CalendarWeather/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.14635416666666667" />
-        <entry key="..\:/CODING/ANDROID/CalendarWeather/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
-        <entry key="..\:/CODING/ANDROID/CalendarWeather/app/src/main/res/layout/activity_search.xml" value="0.13020833333333334" />
-        <entry key="..\:/CODING/ANDROID/CalendarWeather/app/src/main/res/layout/fragment_current_time.xml" value="0.1296875" />
-        <entry key="..\:/CODING/ANDROID/CalendarWeather/app/src/main/res/menu/navigation_menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/CODING/ANDROID/Calendar/app/src/main/res/layout/activity_main.xml" value="0.17119565217391305" />
+        <entry key="..\:/CODING/ANDROID/Calendar/app/src/main/res/layout/activity_search.xml" value="0.16485507246376813" />
+        <entry key="..\:/CODING/ANDROID/Calendar/app/src/main/res/layout/fragment_current_time.xml" value="0.17119565217391305" />
+        <entry key="..\:/CODING/ANDROID/Calendar/app/src/main/res/layout/fragment_current_weather.xml" value="0.17119565217391305" />
+        <entry key="..\:/CODING/ANDROID/Calendar/app/src/main/res/layout/fragment_lunar.xml" value="0.16485507246376813" />
       </map>
     </option>
   </component>
