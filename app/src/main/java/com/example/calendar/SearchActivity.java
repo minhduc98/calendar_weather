@@ -114,7 +114,7 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         // Another interface callback
     }
 
-    public void clickme(View view){
+    public void findInformation(View view){
 
         /*Constant Variable*/
 
@@ -255,14 +255,27 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
 
         /*Duong Lich*/
 
-        leapd.setText(checkd);
+        if (checkd != R.string.empty) {
+            leapd.setText(checkd);
+            leapd.setVisibility(View.VISIBLE);
+        }
+
         thu.setText(day);
         star.setImageResource(duongLich.imgSrc);
         st.setText(duongLich.star);
         ele.setText(duongLich.ele);
         pla.setText(duongLich.st);
-        pla1.setText(duongLich.st1);
-        ang1.setText(duongLich.ang1);
+
+        if (duongLich.st1 != R.string.empty) {
+            pla1.setText(duongLich.st1);
+            pla1.setVisibility(View.VISIBLE);
+        }
+
+        if (duongLich.ang1 != R.string.empty) {
+            ang1.setText(duongLich.ang1);
+            ang1.setVisibility(View.VISIBLE);
+        }
+
         ang.setText(duongLich.ang);
         tc.setText(duongLich.tc);
         tcr.setText(duongLich.tcr);
@@ -277,7 +290,11 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
 
         /*Am Lich*/
 
-        leapa.setText(checka);
+        if (checka != R.string.empty) {
+            leapa.setText(checka);
+            leapa.setVisibility(View.VISIBLE);
+        }
+
 
         solar.setText(da+"/"+m+"/"+y);
         lunar.setText(dat+"/"+mo+"/"+ye);

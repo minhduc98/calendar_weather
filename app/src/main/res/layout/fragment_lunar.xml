@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:id="@+id/leapa"
+        android:visibility="gone"
         android:textSize="20sp"
         android:text="" />
 

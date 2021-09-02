@@ -331,13 +331,10 @@ public class CurrentWeatherFragment extends Fragment {
                     Double min = Arrays.stream(tempChour).min().getAsDouble();
                     Double max = Arrays.stream(tempChour).max().getAsDouble();
                     int minSmall = (int) Math.round(min);
-                    int maxSmall = (int) Math.round(max);
                     int maxRound = (int) Math.floor(max / 10);
                     minSmall = minSmall - minSmall % 10;
-                    maxRound = maxRound * 10 ;
-                    if (maxRound < maxSmall) {
-                        maxSmall = maxSmall + 10;
-                    }
+
+                    int maxSmall = maxRound * 10 + 5;
 
                     float minTemp = (float) minSmall;
                     float maxTemp = (float) maxSmall;

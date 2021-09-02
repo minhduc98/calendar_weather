@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:id="@+id/leapd"
+        android:visibility="gone"
         android:textSize="20sp"
         android:text="" />
 
@@ -52,7 +53,7 @@
                 android:id="@+id/sta"
                 android:text=""
                 android:textColor="#800080"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
         </LinearLayout>
 
         <ImageView
@@ -124,6 +125,7 @@
                     android:id="@+id/pla1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="20sp" />
@@ -157,6 +159,7 @@
                     android:id="@+id/ang1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="20sp" />

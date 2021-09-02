@@ -33,7 +33,7 @@
             android:layout_weight="1"
             android:id="@+id/button"
             android:text="@string/button"
-            android:onClick="clickme"
+            android:onClick="findInformation"
             android:layout_gravity="center_horizontal"
             android:background="#FF0000"
             android:textColor="#FFFF00" />
