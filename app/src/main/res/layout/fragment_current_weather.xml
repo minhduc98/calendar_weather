@@ -83,12 +83,11 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
         android:id="@+id/totalweather"
+        android:layout_width="340dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
         android:fillViewport="true">
-
 
 
         <LinearLayout
@@ -112,37 +111,37 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:layout_marginRight="100px"
                     android:id="@+id/day1"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:layout_marginRight="100px"
                     android:text=""
                     android:textSize="15sp" />
 
                 <ImageView
-                    android:layout_width="130px"
-                    android:layout_height="130px"
                     android:id="@+id/image1"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
                     android:contentDescription="@string/description" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20px"
                     android:id="@+id/tw111"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20px"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:id="@+id/weather1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:id="@+id/temp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text=""
                         android:textSize="15sp" />
                 </LinearLayout>
@@ -156,163 +155,22 @@
                 android:layout_marginStart="10px"
                 android:layout_marginLeft="10px"
                 android:layout_marginRight="10px"
-                
+
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:layout_marginRight="100px"
                     android:id="@+id/day2"
-                    android:text=""
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:layout_width="130px"
-                    android:layout_height="130px"
-                    android:contentDescription="@string/description"
-                    android:id="@+id/image2" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20px"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weather2"
-                        android:text="" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/temp2"
-                        android:text=""
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
-                
-                android:orientation="horizontal">
-
-                <TextView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_margin="30px"
                     android:layout_marginRight="100px"
-                    android:id="@+id/day3"
                     android:text=""
                     android:textSize="15sp" />
 
                 <ImageView
+                    android:id="@+id/image2"
                     android:layout_width="130px"
                     android:layout_height="130px"
-                    android:contentDescription="@string/description"
-                    android:id="@+id/image3" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20px"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weather3"
-                        android:text="" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/temp3"
-                        android:text=""
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
-                
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:layout_marginRight="100px"
-                    android:id="@+id/day4"
-                    android:text=""
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:layout_width="130px"
-                    android:layout_height="130px"
-                    android:contentDescription="@string/description"
-                    android:id="@+id/image4" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20px"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weather4"
-                        android:text="" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/temp4"
-                        android:text=""
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
-                
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:layout_marginRight="100px"
-                    android:id="@+id/day5"
-                    android:text=""
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:layout_width="130px"
-                    android:layout_height="130px"
-                    android:id="@+id/image5"
                     android:contentDescription="@string/description" />
 
                 <LinearLayout
@@ -322,15 +180,156 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/weather2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/temp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/day3"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:layout_marginRight="100px"
+                    android:text=""
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    android:contentDescription="@string/description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/weather3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/temp3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/day4"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:layout_marginRight="100px"
+                    android:text=""
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    android:contentDescription="@string/description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/weather4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/temp4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/day5"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:layout_marginRight="100px"
+                    android:text=""
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    android:contentDescription="@string/description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20px"
+                    android:orientation="vertical">
+
+                    <TextView
                         android:id="@+id/weather5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:id="@+id/temp5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text=""
                         android:textSize="15sp" />
                 </LinearLayout>
@@ -344,23 +343,23 @@
                 android:layout_marginStart="10px"
                 android:layout_marginLeft="10px"
                 android:layout_marginRight="10px"
-                
+
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:layout_marginRight="100px"
                     android:id="@+id/day6"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30px"
+                    android:layout_marginRight="100px"
                     android:text=""
                     android:textSize="15sp" />
 
                 <ImageView
+                    android:id="@+id/image6"
                     android:layout_width="130px"
                     android:layout_height="130px"
-                    android:contentDescription="@string/description"
-                    android:id="@+id/image6" />
+                    android:contentDescription="@string/description" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -369,15 +368,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/weather6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/weather6"
                         android:text="" />
 
                     <TextView
+                        android:id="@+id/temp6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/temp6"
                         android:text=""
                         android:textSize="15sp" />
                 </LinearLayout>
@@ -392,23 +391,23 @@
                 android:layout_marginStart="10px"
                 android:layout_marginLeft="10px"
                 android:layout_marginRight="10px"
-                
+
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/day7"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_margin="30px"
                     android:layout_marginRight="100px"
-                    android:id="@+id/day7"
                     android:text=""
                     android:textSize="15sp" />
 
                 <ImageView
+                    android:id="@+id/image7"
                     android:layout_width="130px"
                     android:layout_height="130px"
-                    android:contentDescription="@string/description"
-                    android:id="@+id/image7" />
+                    android:contentDescription="@string/description" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -417,15 +416,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/weather7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/weather7"
                         android:text="" />
 
                     <TextView
+                        android:id="@+id/temp7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/temp7"
                         android:text=""
                         android:textSize="15sp" />
                 </LinearLayout>

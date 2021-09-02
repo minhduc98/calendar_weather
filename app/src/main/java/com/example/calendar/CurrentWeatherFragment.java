@@ -172,56 +172,6 @@ public class CurrentWeatherFragment extends Fragment {
         return view;
     }
 
-    public int findDay(int d) {
-        int day = 0;
-        switch (d) {
-            case 5: day =  R.string.tue1; break;
-            case 6: day =  R.string.wed1; break;
-            case 0: day =  R.string.thu1; break;
-            case 1: day =  R.string.fri1; break;
-            case 2: day =  R.string.sat1; break;
-            case 3: day =  R.string.sun1; break;
-            case 4: day =  R.string.mon1; break;
-        }
-        return day;
-    }
-
-    public int findWeatherImage(String w1) {
-        int url = 0;
-        if (w1.contains("cloudy") || (w1.contains("clear"))) {
-            url =  R.drawable.cloudy;
-        } else if (w1.contains("sun")) {
-            url =  R.drawable.sunny;
-        } else if (w1.contains("snow")) {
-            url =  R.drawable.snow;
-        } else if (w1.contains("haze") || (w1.contains("mist"))){
-            url =  R.drawable.foggy;
-        } else if (w1.contains("storm")) {
-            url =  R.drawable.storm;
-        } else if (w1.contains("rain") || (w1.contains("drizzle"))) {
-            url =  R.drawable.rain;
-        }
-        return url;
-    }
-
-    public int findWeatherStatus(String w1) {
-        int status = 0;
-        if (w1.contains("cloudy") || (w1.contains("clear"))) {
-            status =  R.string.cloudy;
-        } else if (w1.contains("sun")) {
-            status =  R.string.sunny;
-        } else if (w1.contains("snow")) {
-            status =  R.string.snow;
-        } else if (w1.contains("haze") || (w1.contains("mist"))){
-            status =  R.string.foggy;
-        } else if (w1.contains("storm")) {
-            status =  R.string.storm;
-        } else if (w1.contains("rain") || (w1.contains("drizzle"))) {
-            status =  R.string.rain;
-        }
-        return status;
-    }
-
     private void parsejson(String latlong, final int GMT){
         String url1 = "https://api.darksky.net/forecast/3631f61602a29ee69edc1f4accb0a2b8/" + latlong;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url1, null, new Response.Listener<JSONObject>() {
@@ -256,15 +206,19 @@ public class CurrentWeatherFragment extends Fragment {
 
 
 
-                        day[i].setText(findDay(choose1));
-                        weather[i].setText(findWeatherStatus(w[i]));
-                        weatherImage[i].setImageResource(findWeatherImage(w[i]));
+                        day[i].setText(weatherCalculation.findDay(choose1));
+                        weather[i].setText(weatherCalculation.findWeatherStatus(w[i]));
+                        weatherImage[i].setImageResource(weatherCalculation.findWeatherImage(w[i]));
                         temp[i].setText(tempC[i]);
                     }
 
-                    imgCurrent.setImageResource(findWeatherImage(w[0]));
-                    weatherStatusCurrent.setText(findWeatherStatus(w[0]));
-                    weatherTempCurrent.setText(tempC[0]);
+                    JSONObject currentStatus = response.getJSONObject("currently");
+
+                    imgCurrent.setImageResource(weatherCalculation.findWeatherImage(currentStatus.getString("icon")));
+                    weatherStatusCurrent.setText(weatherCalculation.findWeatherStatus(currentStatus.getString("icon")));
+                    Double currentTemp = currentStatus.getDouble("temperature");
+                    currentTemp = (double)Math.round((currentTemp - 32) * 5/9 * 10) / 10;
+                    weatherTempCurrent.setText(String.valueOf(currentTemp) + 'C');
                     location.setText(R.string.hn);
 
                     /*Find Data for displaying in the graph*/
